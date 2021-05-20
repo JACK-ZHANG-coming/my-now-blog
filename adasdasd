@@ -1,0 +1,354 @@
+[33m6a9070c[m[33m ([m[1;36mHEAD -> [m[1;32mblog_zq[m[33m, [m[1;31morigin/blog_zq[m[33m)[m 更新博客
+[33m854f5ad[m 初始化个人博客网站
+[33me52caf6[m 更新主页
+[33m6c397bf[m 更新初始化配置
+[33mad25d92[m Update a doc
+[33me557ca8[m Update example
+[33mf4cde13[m Update gitignore
+[33m6dd9ee3[m Update .gitignore
+[33mf2d4143[m Add responsiveness for glassmorphism
+[33m6fbc91f[m Fix blog card background issue in dark mode
+[33m53b581d[m Merge branch 'feature-tools'
+[33m37fb64e[m Finish glassmporphism tools
+[33m4d4d318[m Glassmorphism background section
+[33m8f4b4de[m Minor changes
+[33m8b56714[m Add a new video doc
+[33m8ae5a9f[m Update slugs
+[33m6ced73d[m Add tools feature
+[33mcade7ff[m Add a new blog post
+[33m38d808d[m Minor adjustments
+[33mef30db4[m Update tags
+[33ma8978b2[m Add links and translations
+[33m0e261e6[m compress images
+[33maa0dd0e[m Use lazy loading for iframe
+[33m1b696a3[m Update announcemenf
+[33m0bf3e32[m Add express get started doc
+[33m4dcd80d[m Remove unnecessary styles
+[33mb944fa8[m Remove unnecessary window check
+[33m6925784[m Update footer nav
+[33m404595f[m Update video doc intro
+[33m3dcc03d[m Update navigation
+[33m141438f[m Organize navigation
+[33mb3d87b2[m Update list view style - remove local search component
+[33mfc005c4[m Add transition
+[33m22de50c[m Add announcementbar
+[33me989a71[m Fix view switcher problem
+[33m16a6e76[m Add list view
+[33m0778500[m Add a new video doc
+[33mc2420a0[m Remove some scripts and plugins
+[33m3f9d6e7[m Add subscribe
+[33m9c623ac[m Fix video problem
+[33mc852677[m Add a new blog
+[33m173285b[m Update title
+[33m5b2f7ef[m Add a new doc
+[33ma25da9b[m Add a new doc
+[33m0f7e32c[m Merge branch 'master' of https://github.com/zxuqian/zxuqian.cn foreistry integration test
+[33m072dff3[m Update CSS frameworks doc
+[33m5c76eb9[m Update from Forestry.io - Updated Forestry configuration
+[33m4edf356[m Update from Forestry.io - Updated Forestry configuration
+[33ma910c4a[m Update cache control
+[33m095727f[m Update search to use Algolia
+[33m51f3797[m Add a new dob - fix a hygen issue
+[33m666c201[m Add a new doc
+[33m9124d71[m Fix styles
+[33m64f7e5e[m Fix styles
+[33m8a9300f[m Add localization
+[33mcfb29b6[m Add a new doc - fix line highlight in light mode
+[33m2b2db0a[m Add search
+[33md2019fb[m Fix tags page styles
+[33m620ec76[m Update style
+[33m2f15c81[m Add local search
+[33m4bafe77[m Add some configuration
+[33m2e0ba73[m Update some envs
+[33mbbb5f2b[m Add typescript polymorphism video doc
+[33mfcdd9ba[m Hide some ads
+[33mffe8f82[m Add meta keywords
+[33m907ff5c[m Add a new blog
+[33m1dbc432[m Update TOC Styles
+[33m18d6480[m Add hidable sidebar
+[33m62ac49b[m Add a new doc
+[33m7555065[m Minor changes
+[33m8dff525[m Add serve command
+[33ma6b0569[m Add ability to fetch related Yuque docs - when generating video docs
+[33m311c84d[m Upgradet to docusaurus alpha.71
+[33md1284c0[m Update README
+[33m3aefaf0[m Update README
+[33m2d27015[m Update README
+[33ma4ac8e9[m Update README
+[33m6969fc2[m Update README
+[33mc98747c[m Add license - and new blog comments
+[33m2a5ef01[m Add a new post
+[33m0788231[m Minor changes
+[33m9c18b7d[m Add some comments
+[33m87ab968[m Update   - doc title   - automation   - styles
+[33m6d11a5b[m Automated video info acquisition
+[33m8e8b15c[m Update style and fix errors
+[33m6c86853[m Update template - add command line tool - add a new doc
+[33m0fd1ee8[m Update hero image
+[33mf9db269[m Update hero position
+[33m0099802[m Add animation
+[33mc191351[m Update font styles
+[33m5495313[m Add fira code - and fix safari font problem using preconnect
+[33m26eeed7[m Fix safari preload issue
+[33m14a8253[m Add a new doc
+[33m48976f0[m change title
+[33mf1113c0[m defered image
+[33m0949ee2[m Add babel config
+[33ma06ca4f[m Removed live block
+[33m1c7a91e[m Removed unnecessary imports
+[33m6fde752[m Update some styles and articles
+[33m96130aa[m Update styles
+[33m2cf8f2e[m replaced unqualified videos
+[33m4b3577c[m Compressed image
+[33mdf1867e[m Fix font - update text layout
+[33m3d266d5[m fixed a mistake
+[33m8f666fb[m Add comments for collision post
+[33m9df030c[m Add a new blog - and latex support
+[33m0567d5c[m Reopen adsense
+[33m5656e99[m Fix redirect to Bilibili - frontMatter should be correct types
+[33mbfc3f30[m Update styles
+[33mde750a4[m Add translations
+[33mf7a6917[m Add translations
+[33mcddc4eb[m Add i18n files
+[33m5de00e2[m Fix word wrap issue
+[33m0e1cadb[m Add comments, fetched from Bilibili
+[33m64b0ac0[m Update styles
+[33ma4500b3[m Remove ftp command
+[33m5dc7d00[m  Update css frameworks
+[33m18b52cf[m Add rewrite rules
+[33mde39286[m Update styles
+[33m746dd3d[m Add css gradient animation video tutorial
+[33m7865dc1[m Update styles
+[33m29c6d98[m Update styles
+[33m04dc77c[m Update styles
+[33m9e566a0[m Update styles
+[33m43dedb9[m Update styles
+[33m30fbe7f[m Update styles
+[33m54a7a50[m Update styles
+[33m96c8011[m Update some titles
+[33m692da6d[m  Update some titles
+[33m6e4b63e[m Update ftp command
+[33m9aed11b[m Add wechat stickers blog
+[33mb18e3f2[m Add uppervoid jacket review
+[33m702b810[m Update style
+[33m04ecc29[m  Update README
+[33m90dd37c[m Fix sync error
+[33m39e5308[m Update url
+[33m7bfdd85[m Use rclone to deploy
+[33m0f47816[m Add a command
+[33m88f53f7[m Test git-ftp
+[33md9d89ef[m Test git-ftp
+[33m96d55b0[m Test git ftp
+[33md5580f5[m Test gitftp
+[33mb725d10[m Remove github actions for network speed issues
+[33mdc82aa8[m Add a link
+[33mc58673c[m Fix descriptions
+[33m154111b[m  Update name
+[33mdaf7a3e[m Update font style
+[33m730ee8a[m Add new videos
+[33m0a5aaed[m add link
+[33mfcfccaf[m Update blog
+[33mb205dc9[m Add 2020 review blog
+[33m9ee6243[m Add verification
+[33m3e0d837[m Add disclaimer
+[33m20361be[m Update link structure
+[33mf8bb54c[m Update links
+[33mac7b1a7[m Update letter spacing
+[33m97a9e45[m Update heading color
+[33m4182312[m Add vue todo app tutorial
+[33mfe5ad72[m Correct a mistake
+[33me2e480b[m Add a new video
+[33m96cca14[m Fix wechat public qrcode position
+[33m9b72c53[m  Update resources intro
+[33m9abba3a[m fix scroll bar width issue
+[33mac53324[m Add a new menu
+[33m0a49383[m Add css position
+[33mf64a643[m Remove adsense
+[33m30c9f97[m Add adsense
+[33m4fdba42[m Add gtag
+[33m2f7bb7f[m Fix a bug
+[33m607e4b2[m add google analytics
+[33m1cae5a8[m Add google analytics
+[33m53c5740[m Exclude localStorage during building stage
+[33m2065abf[m Prevent duplicate views
+[33m3b65aa1[m  Update sidebar
+[33mb1c9cfb[m Make hoisting clear.
+[33m20bc61f[m Fix indent
+[33mb83f30f[m Corrent a mistake
+[33m90db793[m Change animation
+[33m35b35bd[m Fix hero
+[33mb4d08d1[m Add a new blog
+[33mc0f2f61[m Update font
+[33m8847b13[m Update QQ group position
+[33m09ba7eb[m Fix wechat public position
+[33m84952e3[m Update font-family
+[33m4e98ab1[m Update font
+[33mee621e6[m Change latin font family
+[33md0edd3c[m Update typography
+[33ma3c5260[m Update intro width
+[33m44650fa[m Update intro width
+[33mf7b7842[m Hide heros when paginated
+[33mc868420[m Update homepage
+[33mfcfeb72[m Replace hero
+[33m5b4269d[m Add react-animations
+[33m965f1bc[m Add React-spring animations
+[33m77174ac[m Update link
+[33maee0f90[m Update link
+[33mb510e7b[m Move link location
+[33m9572d12[m Add a link
+[33m77f8266[m  Update video intros
+[33m6363612[m Fix links
+[33m74cf707[m Update video tutorial intro
+[33m3dd10d2[m Upgrade version
+[33m0e8ac6b[m Correct a mistake in event loop
+[33mc01b71d[m Update docusaurus installation command
+[33m7606ec5[m Test CI
+[33m64188c3[m Add server dir
+[33m5e5956e[m Change server
+[33mf07b215[m Upgrade FTP Action
+[33mf0189d6[m Fix CI
+[33m8fd03e0[m Update CI
+[33m77bb5ec[m Fix a link bug
+[33m42c464c[m Add a new doc
+[33mb5c24ee[m Add blog tags
+[33m812148a[m Add bom
+[33m50960e0[m Update style
+[33mb0f4fe9[m Update styles
+[33m565ffe0[m Update styles
+[33m0f5b6db[m Update config
+[33m7deacf8[m Fix wechat public style
+[33m1e9e737[m Update version
+[33mbe0b1df[m Update version
+[33mb459943[m Remove a tag
+[33md105430[m Update node version
+[33m58d57a0[m Update build
+[33m4844e86[m Update code
+[33mcc2b21e[m Update some styles
+[33mfa939b5[m Update style
+[33mbe95a90[m Update style
+[33m73cfa41[m Remove unnecessary imports
+[33mdb0482f[m Update theme
+[33m0eb43aa[m Update theme
+[33m0212485[m Update animation
+[33mbd0011c[m Update dark style
+[33m0f123cd[m Add animations
+[33mf057ca8[m  Update styles
+[33m3f6d73f[m Add baidu push plugin
+[33mb9b2b87[m Add HTTPS script
+[33m4aa41c0[m Update styles
+[33m68541a3[m Update intro
+[33me3e6b0f[m Update background position
+[33m676fbce[m Update style
+[33m578650a[m add what-is-dom video script
+[33m5a24d39[m Add several video scripts
+[33me320863[m Update follow button style
+[33mb37b6b0[m Add followers count
+[33m9c7c1f5[m Update intro
+[33m48debe0[m Fix a bug
+[33md6427aa[m Fix a bug
+[33med1e7a6[m Fix a bug
+[33m4948412[m Expand hero section
+[33m7e79064[m Update event-loop content
+[33m29c5e62[m Fix errors
+[33m2c783d4[m Update doc id
+[33m3739650[m Update nav
+[33m90ffdc6[m Add event-loop video
+[33mdc1675b[m Upgrade docusaurus
+[33m9c98290[m Add 1024 developer health blog
+[33mc919ee2[m Update social links
+[33m3eba07f[m Update tutorials page
+[33m73ce5ee[m Update HarmonyoS Todo tag
+[33m375532f[m Add harmonyos blog JS Todo App
+[33mc324dd4[m Stop adsense
+[33m206de42[m Fix title style
+[33m7b0256f[m Update style
+[33mef4b5fe[m Add google adsense
+[33mfb8fd79[m Fix view count not showing
+[33m7da2829[m Match new version - Update Blog id attr to slug - Update DocPage
+[33m7b1e686[m Add a new blog - 职业规划：程序员的 T 字形发展攻略
+[33m4c2151b[m update title
+[33ma51ee42[m Add a new article
+[33m396cb71[m Update English font weight
+[33m8abdbc8[m Remove view in BlogPostItem
+[33ma95318b[m Get views from single query
+[33m3005dd9[m Update domain
+[33ma920702[m Add view count
+[33m0272bdb[m Update toc css
+[33m5de7f5f[m Add weixin public
+[33m16ef6de[m Update purchase button layout
+[33m1c40a79[m Update blog template
+[33maa87d99[m update rss feed
+[33ma4813b4[m Update nav
+[33me07a354[m Update demo and nav
+[33m2a7cbfe[m Update some styles
+[33m9db9f6e[m Update FTP Action
+[33m16aa6c8[m Update image
+[33m3133c25[m Update theme
+[33m124cf8b[m Update style
+[33mef82d0f[m Update css box-model doc
+[33mf007be9[m Update a doc
+[33m1baf5be[m Change style
+[33m13daf97[m Update codeblock
+[33m0a73c95[m Removed google ads
+[33m7f6f3f0[m Fix a breaking change
+[33m2290756[m Add typescript post
+[33mc0d3a88[m update a link
+[33m6c4cfbd[m Add links
+[33mfb82431[m Add two posts
+[33m31c9b7b[m Fixed an error, thanks to @凯强233
+[33m0139388[m Correct mistakes
+[33m8ee51da[m Add a new blog
+[33m9d50fb8[m Add different colors for flex items
+[33m8ba9e00[m Update title
+[33mbf88283[m Add css flexbox post
+[33m5c90d5a[m Update specificity blog
+[33m995ca1a[m Update blog
+[33m684b301[m Add css specificity blog
+[33md78e549[m Test deploy
+[33mbee15a7[m Add fetch depth to prevent uploading all
+[33m3faf299[m Update blog
+[33m7a664db[m Update blog
+[33m4163313[m Add react state blog
+[33m63566d7[m Add bilibili video
+[33m0171ba0[m Update website
+[33mf5cf993[m Add a new post
+[33me88cf19[m Add a new blog
+[33me269d39[m Update blog
+[33m849d6bb[m Add a new blog
+[33m0878b60[m Update sitemap frequency
+[33mde6faf5[m Update social media links
+[33ma9ce559[m add new blog post
+[33mdf1fd58[m update
+[33mcee9901[m Update comment for learning english
+[33mf3150cd[m Add a new post
+[33m72733bf[m Add a new blog post
+[33me796298[m Update ftp root
+[33mf3bbf08[m update ci
+[33mb2f190f[m Update nodejs.yml
+[33meb483b1[m Update nodejs.yml
+[33md931d29[m Create nodejs.yml
+[33mb879df8[m add links for ICP
+[33m2140333[m Update article
+[33m73a74ed[m removed images
+[33mf7c8c85[m Update links
+[33mb315ecc[m Removed ads.txt
+[33mecb0687[m update url
+[33m399d063[m Reduced size of logo
+[33m27bf5fb[m update url
+[33m861184b[m Update homepage url
+[33m0bab932[m Update blog
+[33m076d4ee[m fix bug
+[33m8e75cbc[m Add cert
+[33m56c8a8b[m Add image test
+[33m5abf7f4[m Update style
+[33mfd87760[m Update baidu verification
+[33m2be23c4[m Add badu analytics
+[33md51c582[m Update theme
+[33m6af9803[m Add live code plugin
+[33m2f7320b[m Update readme
+[33m2596e81[m Update author info
+[33mc30954a[m Update profile
+[33m5c2f318[m update profile image
+[33m8aa95da[m Add a blog
+[33ma9dadd8[m Update code
+[33mddc888f[m initial commit
