@@ -54,19 +54,16 @@ module.exports = {
               label: "react 教程",
               // to: "/",
             },
-            // {
-            //   label: "B 站配套文本",
-            //   to: "docs/videos/videos-intro",
-            // },
-            // {
-            //   label: "CSS 教程",
-            //   to: "docs/css/box-model/box-model",
-            // },
-            // {
-            //   label: "资源导航",
-            //   // position: "right",
-            //   to: "docs/resources/resources-intro",
-            // },
+          ],
+        },
+        {
+          label: "小工具",
+          position: "right",
+          items: [
+            {
+              label: "简易的rap参数转ts格式工具",
+              to: "https://etools.vercel.app/",
+            },
           ],
         },
 
@@ -93,7 +90,7 @@ module.exports = {
         //   position: "right",
         // },
         {
-          href: "https://github.com/JACK-ZHANG-coming/zxuqian.cn",
+          href: "https://github.com/JACK-ZHANG-coming/my-now-blog",
           label: "本站源码",
           position: "right",
         },
