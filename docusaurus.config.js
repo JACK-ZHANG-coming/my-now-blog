@@ -46,13 +46,13 @@ module.exports = {
               label: "CSS 教程",
               to: "docs/css/css-intro",
             },
-            {
-              label: "JavaScript 教程",
-              // to: "/",
-            },
+            // {
+            //   label: "JavaScript 教程",
+            //   // to: "/",
+            // },
             {
               label: "react 教程",
-              // to: "/",
+              to: "docs/react/react-intro",
             },
           ],
         },
@@ -64,6 +64,7 @@ module.exports = {
               label: "简易的rap参数转ts格式工具",
               to: "https://etools.vercel.app/",
             },
+            
           ],
         },
 
