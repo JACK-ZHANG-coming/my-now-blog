@@ -1,6 +1,6 @@
 ---
-slug: 回炉重造，css常规布局系统整理——实战开发后复盘小结
-title: 回炉重造，css常规布局系统整理——实战开发后复盘小结
+slug: 自定义Ant Design样式组件样式的几种方法
+title: 自定义Ant Design样式组件样式的几种方法
 author: 潜心专研的小张同学
 author_title: 前端工程师 / B站UP主
 author_url: https://github.com/JACK-ZHANG-coming
@@ -14,7 +14,7 @@ tags: [前端, css]
 
 <!-- truncate -->
 
-# 回炉重造，css常规布局系统整理——实战开发后复盘小结
+# 自定义Ant Design样式组件样式的几种方法
 
 > 写在前面：
 >
