@@ -19,7 +19,7 @@ tags: [前端, React]
 <!-- truncate -->
 
 # 链接： [源码：Github - React-Examples](https://github.com/JACK-ZHANG-coming/my-now-blog)
-
+# 生成命令 hygen blog new [博客名称]
 
 
 
