@@ -5,8 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
@@ -91,6 +90,11 @@ function BlogListPage(props) {
   //   },
   // });
 
+
+  useEffect(() => {
+    
+  }, []);
+
   return (
     <Layout
       title={title}
@@ -155,7 +159,6 @@ function BlogListPage(props) {
                   //       id="hompage.hero.text.link"
                   //       description="Link link label"
                   //     >
-                  //       前端资源导航、
                   //     </Translate>
                   //   </Link>
                   // ),
@@ -165,7 +168,6 @@ function BlogListPage(props) {
                   //       id="hompage.hero.text.idea"
                   //       description="Idea link label"
                   //     >
-                  //       想法和生活点滴
                   //     </Translate>
                   //   </Link>
                   // ),
@@ -311,11 +313,10 @@ function BlogListPage(props) {
                                   ) => (
                                     <Link
                                       key={tagPermalink}
-                                      className={`post__tags ${
-                                        index < tags.length
-                                          ? "margin-right--sm"
-                                          : ""
-                                      }`}
+                                      className={`post__tags ${index < tags.length
+                                        ? "margin-right--sm"
+                                        : ""
+                                        }`}
                                       to={tagPermalink}
                                       style={{
                                         fontSize: "0.75em",
