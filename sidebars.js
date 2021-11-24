@@ -10,17 +10,24 @@ module.exports = {
   //   // Features: ["mdx"],
   //   "React 基础示例": [],
   // },
-  css:{
-    前言:["css/css-intro"],
-    css基础:[
-      "css/css基础/test/css-test",  
+  html: {
+    前言: ["html/html-intro"],
+    html笔记: [
+      "html/html笔记/test/html-test",
+      "html/html笔记/test/html-test2",
+    ]
+  },
+  css: {
+    前言: ["css/css-intro"],
+    css基础: [
+      "css/css基础/test/css-test",
     ],
   },
-  react:{
-    前言:["react/react-intro"],
-    react基础:[
-      "react/react基础/test/react-test",  
-      "react/react基础/test/react-test2",  
+  react: {
+    前言: ["react/react-intro"],
+    react基础: [
+      "react/react基础/test/react-test",
+      "react/react基础/test/react-test2",
     ],
   },
   // css_tutorials: {

@@ -28,8 +28,7 @@ module.exports = {
         src: "https://avatars.githubusercontent.com/u/44993003?s=400&u=02570a73330dd7eeae310b302962c034b2833988&v=4",
         srcDark: "https://avatars.githubusercontent.com/u/44993003?s=400&u=02570a73330dd7eeae310b302962c034b2833988&v=4",
       },
-      items: [
-        {
+      items: [{
           type: "localeDropdown",
           position: "left",
         },
@@ -41,17 +40,16 @@ module.exports = {
         {
           label: "专属学习文档",
           position: "right",
-          items: [
+          items: [{
+              label: "HTML 学习笔记",
+              to: "docs/html/html-intro",
+            },
             {
-              label: "CSS 教程",
+              label: "CSS 学习笔记",
               to: "docs/css/css-intro",
             },
-            // {
-            //   label: "JavaScript 教程",
-            //   // to: "/",
-            // },
             {
-              label: "react 教程",
+              label: "react 学习笔记",
               to: "docs/react/react-intro",
             },
           ],
@@ -59,12 +57,11 @@ module.exports = {
         {
           label: "小工具",
           position: "right",
-          items: [
-            {
+          items: [{
               label: "简易的rap参数转ts格式工具",
               to: "https://etools.vercel.app/",
             },
-            
+
           ],
         },
 
@@ -110,11 +107,9 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
+      links: [{
           title: "学习",
-          items: [
-            {
+          items: [{
               label: "w3school 在线教程",
               to: "https://www.w3school.com.cn/index.html",
             },
@@ -130,14 +125,6 @@ module.exports = {
               label: "使用 State Hook – React",
               to: "https://zh-hans.reactjs.org/docs/hooks-state.html#gatsby-focus-wrapper",
             },
-            // {
-            //   label: "CSS 教程",
-            //   to: "docs/css/box-model/box-model",
-            // },
-            // {
-            //   label: "资源导航",
-            //   to: "docs/resources/resources-intro",
-            // },
           ],
         },
         {
@@ -159,8 +146,7 @@ module.exports = {
         },
         {
           title: "友情链接",
-          items: [
-            {
+          items: [{
               label: "yuqing521のblog",
               to: "https://yuqing521.github.io/",
             },
@@ -262,8 +248,7 @@ module.exports = {
     //   },
     // ],
   ],
-  stylesheets: [
-    {
+  stylesheets: [{
       rel: "preconnect",
       href: "https://fonts.gstatic.com",
       type: "text/css",
@@ -271,8 +256,7 @@ module.exports = {
     {
       href: "/katex/katex.min.css",
       type: "text/css",
-      integrity:
-        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+      integrity: "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
       crossorigin: "anonymous",
     },
     {
