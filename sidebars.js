@@ -15,6 +15,7 @@ module.exports = {
     html笔记: [
       "html/html笔记/test/html-test",
       "html/html笔记/test/html-test2",
+      "html/html笔记/test/html-test3",
     ]
   },
   css: {
