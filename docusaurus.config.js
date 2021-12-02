@@ -59,7 +59,7 @@ module.exports = {
           position: "right",
           items: [{
               label: "简易的rap参数转ts格式工具",
-              to: "https://etools.vercel.app/",
+              to: "https://jack-zhang-coming.github.io/rap-to-ts/",
             },
 
           ],
@@ -136,7 +136,7 @@ module.exports = {
             // },
             {
               label: "GitHub",
-              href: "https://github.com/JACK-ZHANG-coming/zxuqian.cn",
+              href: "https://github.com/JACK-ZHANG-coming",
             },
             {
               label: "Bilibili 哔哩哔哩",

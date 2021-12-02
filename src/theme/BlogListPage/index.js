@@ -356,7 +356,7 @@ function SocialLinks({ animatedProps, ...props }) {
       {/* <a href="https://www.linkedin.com/in/zxuqian/">
         <FontAwesomeIcon icon={faLinkedin} size="lg" />
       </a> */}
-      <a href="https://github.com/JACK-ZHANG-coming/my-now-blog">
+      <a href="https://github.com/JACK-ZHANG-coming">
         <FontAwesomeIcon icon={faGithub} size="lg" />
       </a>
       <a href="https://blog.csdn.net/weixin_43207103?spm=1000.2115.3001.5343">
