@@ -1,5 +1,5 @@
 ---
-id: html-test3
+id: 03HTML DOM节点操作
 title: HTML DOM节点操作
 sidebar_label: HTML DOM节点操作
 ---

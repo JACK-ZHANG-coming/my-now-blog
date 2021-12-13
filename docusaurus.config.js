@@ -38,21 +38,9 @@ module.exports = {
           position: "right",
         },
         {
+          to: "docs/all-intro",
           label: "专属学习文档",
           position: "right",
-          items: [{
-              label: "HTML 学习笔记",
-              to: "docs/html/html-intro",
-            },
-            {
-              label: "CSS 学习笔记",
-              to: "docs/css/css-intro",
-            },
-            {
-              label: "react 学习笔记",
-              to: "docs/react/react-intro",
-            },
-          ],
         },
         {
           label: "小工具",
@@ -64,39 +52,11 @@ module.exports = {
 
           ],
         },
-
-        // {
-        //   label: "课程",
-        //   position: "right",
-        //   items: [
-        //     {
-        //       label: "React 即时通信 UI 开发实战",
-        //       to: "docs/course/react-chat-ui/react-chat-ui",
-        //     },
-        //   ],
-        // },
-
-        // {
-        //   label: "小工具",
-        //   position: "right",
-        //   to: "docs/tools/tools-intro",
-        // },
-
-        // {
-        //   href: "https://www.itnanls.cn",
-        //   label: "IT楠老师",
-        //   position: "right",
-        // },
         {
           href: "https://github.com/JACK-ZHANG-coming/my-now-blog",
           label: "本站源码",
           position: "right",
         },
-        // {
-        //   href: "https://github.com/zxuqian/frontend-questions/issues",
-        //   label: "提问",
-        //   position: "right",
-        // },
       ],
     },
     algolia: {
@@ -129,12 +89,7 @@ module.exports = {
         },
         {
           title: "社交媒体",
-          items: [
-            // {
-            //   label: "首页",
-            //   to: "/",
-            // },
-            {
+          items: [{
               label: "GitHub",
               href: "https://github.com/JACK-ZHANG-coming",
             },
