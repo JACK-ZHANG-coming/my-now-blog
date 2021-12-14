@@ -144,7 +144,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/JACK-ZHANG-coming/zxuqian.cn",
+          editUrl: "https://github.com/JACK-ZHANG-coming/my-now-blog/blob/main",
           remarkPlugins: [math],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
