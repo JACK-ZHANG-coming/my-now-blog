@@ -8,7 +8,7 @@
 module.exports = {
   allDocs: {
     开始: ["all-intro"],
-    html: [
+    'html(5)': [
       "html/01第一个html",
       "html/02LocalStorage与SessionStorage",
       "html/03HTML DOM节点操作",
