@@ -4,6 +4,8 @@ title: 02LocalStorage与SessionStorage
 sidebar_label: LocalStorage与SessionStorage
 ---
 
+
+
 # localStorage与sessionStorage
 `localStorage`和`sessionStorage`是`HTML5`提供的对于`Web`存储的解决方案。
 

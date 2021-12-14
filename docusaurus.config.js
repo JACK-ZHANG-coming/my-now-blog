@@ -32,14 +32,14 @@ module.exports = {
           type: "localeDropdown",
           position: "left",
         },
-        {
-          to: "/",
-          label: "首页",
-          position: "right",
-        },
+        // {
+        //   to: "/",
+        //   label: "首页",
+        //   position: "right",
+        // },
         {
           to: "docs/all-intro",
-          label: "专属学习文档",
+          label: "专属学习笔记",
           position: "right",
         },
         {
@@ -227,7 +227,8 @@ module.exports = {
   ],
   i18n: {
     defaultLocale: "zh-CN",
-    locales: ["zh-CN", "en"],
+    locales: ["zh-CN"],
+    // locales: ["zh-CN", "en"],
     localeConfigs: {
       "zh-CN": {
         label: "中文",
