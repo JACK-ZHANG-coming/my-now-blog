@@ -3,6 +3,7 @@ id: 03HTML DOM节点操作
 title: HTML DOM节点操作
 sidebar_label: HTML DOM节点操作
 ---
+
 # HTML DOM节点操作
 `HTML`节点的基本操作，添加节点，替换节点，删除节点，绑定事件，访问子节点，访问父节点，访问兄弟节点。  
 文档对象模型`Document Object Model`，简称`DOM`，是`W3C`组织推荐的处理可扩展标记语言`XML`的标准编程接口，是一种与平台和语言无关的应用程序接口`API`。  

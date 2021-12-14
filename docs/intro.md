@@ -1,7 +1,7 @@
 ---
 id: all-intro
-title: 前言
-sidebar_label: 写在前面
+title: 序言
+sidebar_label: 序言
 ---
 
 此模块为my所有博客笔记汇总，主要记录
