@@ -1,6 +1,6 @@
 ---
 id: 02LocalStorage与SessionStorage
-title: 02LocalStorage与SessionStorage
+title: LocalStorage与SessionStorage
 sidebar_label: LocalStorage与SessionStorage
 ---
 
