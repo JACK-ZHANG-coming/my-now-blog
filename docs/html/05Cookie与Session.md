@@ -46,4 +46,4 @@ sidebar_label: Cookie与Session
 `Cookie`由于浏览器的同源策略，只有同源的情况下才会发送，`Session`在服务端理论上可以进行多域共享。
 
 ### 存储大小
-`Cookie`大小由浏览器限制，一般不超过`4KB`，`Session`在服务端大小可以灵活控制。
+`Cookie`大小由浏览器限制，一般不超过`4KB`，`Session`在服务端大小可以灵活控制。。
