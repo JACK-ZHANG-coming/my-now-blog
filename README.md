@@ -1,6 +1,6 @@
 # 个人博客
 
-本博客基于 [Docusaurus 2](https://v2.docusaurus.io/) JAMStack 静态网站生成器实现，作为 Bilibili（峰华前端工程师） 视频的文本版载体呈现。不定时更新前端开发相关博客，后续考虑增加全栈开发内容。
+本博客基于 [Docusaurus 2](https://v2.docusaurus.io/) JAMStack 静态网站生成器与[峰华前端工程师博客网站](https://zxuqian.cn/)实现，作为 Bilibili（潜心专研的小张同学） 视频的文本版载体呈现与个人前端知识总结归纳分析。本博客网站专注前端发展与技术分享，至死不渝！
 
 本博客的代码如无特殊说明，可以自由使用，版权信息详见[关于版权](#关于版权)部分。接下来简单介绍一下本博客的开发和部署方式，关于 Docusaurus 的使用方法请参考官方网站 [Docusaurus 2](https://v2.docusaurus.io/)。
 
@@ -9,14 +9,13 @@
 首先克隆仓库代码：
 
 ```bash
-$ git clone https://github.com/zxuqian/zxuqian.cn.git
+$ git clone https://github.com/JACK-ZHANG-coming/my-now-blog
 
 ```
 
 安装依赖：
 
 ```bash
-$ cd zxuqian.cn
 $ yarn install
 # 或使用 npm install，下同
 ```
@@ -30,7 +29,7 @@ $ yarn start
 构建项目：
 
 ```bash
-# 同时构建中文和英文版
+# 同时构建中文和英文版 
 $ yarn build
 
 # 只构建中文版
@@ -38,6 +37,8 @@ $ yarn build-cn
 ```
 
 关于部署，由于不同的服务器、平台有不同的方式，可以使用 Github Pages、FTP、自行搭建服务器等。
+
+本人采用的是 vercel来构建的： https://vercel.com/dashboard
 
 ## 目录介绍
 
@@ -128,15 +129,6 @@ hygen doc new react-get-started
 
 ### Comments
 
-## 赞助
-
-本博客的设计、代码均免费提供，如果觉得对你有帮助，可以小赞一笔，以支持我发布更好的视频、文章和代码，感谢！
-
-|                          微信                          |                       支付宝                        |
-| :----------------------------------------------------: | :-------------------------------------------------: |
-| <img src="./static/img/wechatPay.webp" height="250" /> | <img src="./static/img/aliPay.webp" height="250" /> |
 ## 关于版权
 
 所有插件、主题代码均为开源，可自由使用分发。其他内容包括但不限于文章、图片、视频等版权均为作者所有，但遵循 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.zh-Hans) 协议，转载时请注明来源和署名，并且不可用于商业目的。
-
-博客首页头图 `./src/theme/BlogListPage/img/hero_main.svg` 为版权图片，不可在产品环境中使用，亦不可进行传播、复制或修改，或用于任何目的。

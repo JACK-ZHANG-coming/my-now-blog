@@ -6,94 +6,92 @@
  */
 
 module.exports = {
-  // samples: {
-  //   // Features: ["mdx"],
-  //   "React 基础示例": [],
-  // },
-  css:{
-    前言:["css/css-intro"],
-    css基础:[
-      "css/css基础/test/css-test",  
-    ],
-  },
-  react:{
-    前言:["react/react-intro"],
-    react基础:[
-      "react/react基础/test/react-test",  
-      "react/react基础/test/react-test2",  
-    ],
-  },
-  // css_tutorials: {
-  //   基础: ["css/box-model/box-model"],
-  // },
-  // videos: {
-  //   简介: ["videos/videos-intro"],
-  //   JavaScript: ["videos/js/event-loop/event-loop"],
-  //   CSS: [
-  //     "videos/css/03-5-tips-master-css/5-tips-master-css",
-  //     "videos/css/grid-layout/grid-layout",
-  //     "videos/css/flex-layout/flex-layout",
-  //     "videos/css/selectors/css-selectors",
-  //     "videos/css/position/css-position",
-  //     "videos/css/css-hsl-color/css-hsl-color",
-  //     "videos/css/css-grid-place-items/css-grid-place-items",
-  //     "videos/css/css-text-image-wrap/css-text-image-wrap",
-  //   ],
-  //   HTML: ["videos/html/html-basics/html-basics"],
-  //   特效: [
-  //     "videos/effects/glassmorphism/effects-glassmorphism",
-  //     "videos/effects/cyberpunk/effects-glitch",
-  //     "videos/effects/resize/effects-resizable",
-  //     "videos/effects/gradient-animation/gradient-animation",
-  //   ],
-  //   浏览器: [
-  //     "videos/browser/dom/what-is-dom",
-  //     "videos/browser/bom/what-is-bom",
-  //     "videos/browser/js-dom/js-dom-operation",
-  //     "videos/browser/native-drag-drop/native-drag-drop",
-  //     "videos/browser/web-components-get-started/web-components-get-started",
-  //   ],
-  //   Web: [],
-  //   网络: [
-  //     "videos/network/http-basics/http-basics",
-  //     "videos/network/https-basics/https-basics",
-  //   ],
-  //   React: [
-  //     "videos/react/react-props-buttons/react-props-button",
-  //     "videos/react/gradient-bg-react-state-event/react-state-event-gradient",
-  //     "videos/react/03-5-react-spring-animations/5-react-spring-animations",
-  //   ],
-
-  //   Vue: [
-  //     "videos/vue/vue-todo-app/vue-todo-app",
-  //     "videos/vue/vite-get-started/vite-get-started",
-  //     "videos/vue/vue-watch-api-tips/vue-watch-api-tips",
-  //     "videos/vue/vue-echarts-integration/vue-echarts-integration",
-  //     "videos/vue/vue-echarts-bar-chart/vue-echarts-bar-chart",
-  //     "videos/vue/vue-echarts-doughnut-chart/vue-echarts-doughnut-chart",
-  //   ],
-  //   TypeScript: [
-  //     "videos/ts/intro/ts-intro",
-  //     "videos/ts/typescript-oo-basics/typescript-oo-basics",
-  //     "videos/ts/typescript-oop-abstraction/typescript-oop-abstraction",
-  //     "videos/ts/typescript-oop-inheritance/typescript-oop-inheritance",
-  //     "videos/ts/typescript-oop-polymorphism/typescript-oop-polymorphism",
-  //   ],
-  //   Express: [
-  //     "videos/express/express-get-started/express-get-started",
-  //     "videos/express/express-mongo-crud/express-mongo-crud",
-  //   ],
-  //   "Mongo DB": ["videos/mongo/mongodb-get-started/mongodb-get-started"],
-  // },
-  // resources: {
-  //   简介: ["resources/resources-intro"],
-  //   前端开发: ["resources/ui/css-frameworks/css-frameworks"],
-  //   开发工具: ["resources/tools/vs-code-themes/vs-code-themes"],
-  //   效率工具: [],
-  //   "UI 设计": [],
-  // },
-  // tools: {
-  //   简介: ["tools/tools-intro"],
-  //   "CSS 工具": ["tools/glassmorphism-generator/glassmorphism-generator"],
-  // },
+  mySidebar: [{
+      type: 'doc',
+      id: 'all-intro', // 文档 ID
+      label: '开始', // 侧边栏标签
+    },
+    {
+      type: 'category',
+      label: 'html(16)',
+      items: [
+        "html/01第一个html",
+        "html/02LocalStorage与SessionStorage",
+        "html/03HTML DOM节点操作",
+        "html/04iframe框架及优缺点",
+        "html/05Cookie与Session",
+        "html/06HTML5新特性",
+        "html/07Canvas基础",
+        "html/08前端性能优化方案",
+        "html/09行内元素和块级元素",
+        "html/10Web Worker",
+        "html/11300ms点击延迟",
+        "html/12事件冒泡与阻止冒泡机制",
+        "html/13可替换元素和非替换元素",
+        "html/14HTML与XHTML区别",
+        "html/15常见的兼容性问题",
+        "html/16DOM和BOM的区别",
+      ]
+    },
+    {
+      type: 'category',
+      label: 'css(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'javascript(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'react(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: '微信小程序(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'HTTP(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'Browser(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'Webpack(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: 'git代码托管(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: '数据结构与算法(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: '设计模式(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: '编码规范(0)',
+      items: []
+    },
+    {
+      type: 'category',
+      label: '杂谈(0)',
+      items: []
+    },
+  ],
 };

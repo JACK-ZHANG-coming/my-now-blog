@@ -7,7 +7,6 @@ module.exports = {
   // tagline:
   //   "帮助你提升前端开发技能，分享 HTML、CSS、JavaScript、React 和 Vue 等开发实战经验",
   titleDelimiter: "-",
-  // url: "https://zxuqian.cn",
   url: "https://zhangqiang.vercel.app",
   baseUrl: "/",
   favicon: "https://avatars.githubusercontent.com/u/44993003?s=400&u=02570a73330dd7eeae310b302962c034b2833988&v=4", // 网站图标
@@ -28,78 +27,35 @@ module.exports = {
         src: "https://avatars.githubusercontent.com/u/44993003?s=400&u=02570a73330dd7eeae310b302962c034b2833988&v=4",
         srcDark: "https://avatars.githubusercontent.com/u/44993003?s=400&u=02570a73330dd7eeae310b302962c034b2833988&v=4",
       },
-      items: [
-        {
+      items: [{
           type: "localeDropdown",
           position: "left",
         },
+        // {
+        //   to: "/",
+        //   label: "首页",
+        //   position: "right",
+        // },
         {
-          to: "/",
-          label: "首页",
+          to: "docs/all-intro",
+          label: "专属学习笔记",
           position: "right",
-        },
-        {
-          label: "专属学习文档",
-          position: "right",
-          items: [
-            {
-              label: "CSS 教程",
-              to: "docs/css/css-intro",
-            },
-            // {
-            //   label: "JavaScript 教程",
-            //   // to: "/",
-            // },
-            {
-              label: "react 教程",
-              to: "docs/react/react-intro",
-            },
-          ],
         },
         {
           label: "小工具",
           position: "right",
-          items: [
-            {
+          items: [{
               label: "简易的rap参数转ts格式工具",
-              to: "https://etools.vercel.app/",
+              to: "https://jack-zhang-coming.github.io/rap-to-ts/",
             },
-            
+
           ],
         },
-
-        // {
-        //   label: "课程",
-        //   position: "right",
-        //   items: [
-        //     {
-        //       label: "React 即时通信 UI 开发实战",
-        //       to: "docs/course/react-chat-ui/react-chat-ui",
-        //     },
-        //   ],
-        // },
-
-        // {
-        //   label: "小工具",
-        //   position: "right",
-        //   to: "docs/tools/tools-intro",
-        // },
-
-        // {
-        //   href: "https://www.itnanls.cn",
-        //   label: "IT楠老师",
-        //   position: "right",
-        // },
         {
           href: "https://github.com/JACK-ZHANG-coming/my-now-blog",
           label: "本站源码",
           position: "right",
         },
-        // {
-        //   href: "https://github.com/zxuqian/frontend-questions/issues",
-        //   label: "提问",
-        //   position: "right",
-        // },
       ],
     },
     algolia: {
@@ -110,11 +66,9 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
+      links: [{
           title: "学习",
-          items: [
-            {
+          items: [{
               label: "w3school 在线教程",
               to: "https://www.w3school.com.cn/index.html",
             },
@@ -130,26 +84,13 @@ module.exports = {
               label: "使用 State Hook – React",
               to: "https://zh-hans.reactjs.org/docs/hooks-state.html#gatsby-focus-wrapper",
             },
-            // {
-            //   label: "CSS 教程",
-            //   to: "docs/css/box-model/box-model",
-            // },
-            // {
-            //   label: "资源导航",
-            //   to: "docs/resources/resources-intro",
-            // },
           ],
         },
         {
           title: "社交媒体",
-          items: [
-            // {
-            //   label: "首页",
-            //   to: "/",
-            // },
-            {
+          items: [{
               label: "GitHub",
-              href: "https://github.com/JACK-ZHANG-coming/zxuqian.cn",
+              href: "https://github.com/JACK-ZHANG-coming",
             },
             {
               label: "Bilibili 哔哩哔哩",
@@ -159,8 +100,7 @@ module.exports = {
         },
         {
           title: "友情链接",
-          items: [
-            {
+          items: [{
               label: "yuqing521のblog",
               to: "https://yuqing521.github.io/",
             },
@@ -204,7 +144,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/JACK-ZHANG-coming/zxuqian.cn",
+          editUrl: "https://github.com/JACK-ZHANG-coming/my-now-blog/blob/main",
           remarkPlugins: [math],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
@@ -262,8 +202,7 @@ module.exports = {
     //   },
     // ],
   ],
-  stylesheets: [
-    {
+  stylesheets: [{
       rel: "preconnect",
       href: "https://fonts.gstatic.com",
       type: "text/css",
@@ -271,8 +210,7 @@ module.exports = {
     {
       href: "/katex/katex.min.css",
       type: "text/css",
-      integrity:
-        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+      integrity: "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
       crossorigin: "anonymous",
     },
     {
@@ -288,7 +226,8 @@ module.exports = {
   ],
   i18n: {
     defaultLocale: "zh-CN",
-    locales: ["zh-CN", "en"],
+    locales: ["zh-CN"],
+    // locales: ["zh-CN", "en"],
     localeConfigs: {
       "zh-CN": {
         label: "中文",
