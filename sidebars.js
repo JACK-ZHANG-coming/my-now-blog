@@ -13,7 +13,7 @@ module.exports = {
   },
   {
     type: 'category',
-    label: 'html(16)',
+    label: 'html(18)',
     items: [
       "html/01第一个html",
       "html/02LocalStorage与SessionStorage",
@@ -32,12 +32,15 @@ module.exports = {
       "html/15常见的兼容性问题",
       "html/16DOM和BOM的区别",
       "html/17实现图片懒加载",
+      "html/18Shadow DOM的理解",
     ]
   },
   {
     type: 'category',
-    label: 'css(0)',
-    items: []
+    label: 'css(1)',
+    items: [
+      "css/01第一个css"
+    ]
   },
   {
     type: 'category',
