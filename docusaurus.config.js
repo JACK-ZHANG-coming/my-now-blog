@@ -20,6 +20,11 @@ module.exports = {
     //   textColor: "#091E42", // Defaults to `#000`.
     // },
     hideableSidebar: true,
+    // docs:{
+    //   sidebar:{
+    //     hideable: true,
+    //   }
+    // },
     navbar: {
       title: "潜心专研的小张同学",
       logo: {
@@ -148,6 +153,11 @@ module.exports = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           showLastUpdateTime: true,
+          // sidebar:{
+          //   hideeble:{
+              
+          //   }
+          // }
         },
         blog: {
           path: "./blog",

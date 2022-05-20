@@ -39,6 +39,7 @@ $ yarn build-cn
 关于部署，由于不同的服务器、平台有不同的方式，可以使用 Github Pages、FTP、自行搭建服务器等。
 
 本人采用的是 vercel来构建的： https://vercel.com/dashboard
+（先已经改用自己购买的服务器，但是依然可以用vercel来构建，只是国内的快一些而已）
 
 ## 目录介绍
 

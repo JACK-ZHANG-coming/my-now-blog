@@ -42,60 +42,60 @@ module.exports = {
       "css/01第一个css"
     ]
   },
-  // {
-  //   type: 'category',
-  //   label: 'javascript(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: 'react(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: '微信小程序(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: 'HTTP(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: 'Browser(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: 'Webpack(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: 'git代码托管(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: '数据结构与算法(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: '设计模式(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: '编码规范(0)',
-  //   items: []
-  // },
-  // {
-  //   type: 'category',
-  //   label: '杂谈(0)',
-  //   items: []
-  // },
+  {
+    type: 'category',
+    label: 'javascript(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: 'react(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: '微信小程序(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: 'HTTP(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: 'Browser(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: 'Webpack(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: 'git代码托管(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: '数据结构与算法(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: '设计模式(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: '编码规范(0)',
+    items: []
+  },
+  {
+    type: 'category',
+    label: '杂谈(0)',
+    items: []
+  },
   ],
 };
