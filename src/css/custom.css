@@ -46,6 +46,9 @@
 }
 
 html {
+  /* 灰度 */
+  filter: grayscale(1); 
+  -webkit-: grayscale(1);
   --post-title-color: hsl(220deg 79% 58%);
   --post-pub-date-color: #8c8c8c;
   --divider-color: #ebebeb;
