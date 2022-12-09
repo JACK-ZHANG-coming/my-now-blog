@@ -57,6 +57,10 @@ module.exports = {
               label: "小张同学的照片墙",
               to: "https://photo.zhangqiang.hk.cn/",
             },
+            {
+              label: "基于ChatGPT的问答系统",
+              to: "http://chatgptrobot.zhangqiang.hk.cn/",
+            },
           ],
         },
         {
