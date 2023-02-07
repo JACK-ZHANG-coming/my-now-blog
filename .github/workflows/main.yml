@@ -34,7 +34,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           REMOTE_POR: '22'
-          SOURCE: './src/.vuepress/dist/'
+          SOURCE: 'build/'
           TARGET: ${{ secrets.REMOTE_PATH }}
 #           ARGS: '-rltgoDzvO'
           
