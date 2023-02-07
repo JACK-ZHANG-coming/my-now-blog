@@ -19,6 +19,8 @@ cloudbaserc.json
 .env.production.local
 .env
 
+.vscode
+
 docsearch.json
 
 npm-debug.log*
