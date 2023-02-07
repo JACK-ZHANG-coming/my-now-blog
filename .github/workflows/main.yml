@@ -18,14 +18,11 @@ jobs:
         with:
           node-version: '14.x'
         
-      - name: 安装pnpm
-        run: npm install
-        
       - name: 安装依赖
         run: npm install
         
       - name: 打包项目
-        run: npm run-script build
+        run: npm run build
         
       - name: 项目部署
         uses: easingthemes/ssh-deploy@v3.0.1
