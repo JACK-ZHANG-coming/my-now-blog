@@ -33,41 +33,46 @@ module.exports = {
         srcDark: "https://avatars.githubusercontent.com/u/44993003?s=400&u=02570a73330dd7eeae310b302962c034b2833988&v=4",
       },
       items: [{
-          type: "localeDropdown",
-          position: "left",
-        },
-        // {
-        //   to: "/",
-        //   label: "首页",
-        //   position: "right",
-        // },
-        {
-          to: "docs/all-intro",
-          label: "专属学习笔记",
-          position: "right",
-        },
-        {
-          label: "小工具",
-          position: "right",
-          items: [{
-              label: "简易的rap参数转ts格式工具",
-              to: "https://jack-zhang-coming.github.io/rap-to-ts/",
-            },
-            {
-              label: "小张同学的照片墙",
-              to: "https://photo.zhangqiang.hk.cn/",
-            },
-            {
-              label: "基于ChatGPT的问答系统",
-              to: "http://chatgptrobot.zhangqiang.hk.cn/",
-            },
-          ],
-        },
-        {
-          href: "https://github.com/JACK-ZHANG-coming/my-now-blog",
-          label: "本站源码",
-          position: "right",
-        },
+        type: "localeDropdown",
+        position: "left",
+      },
+      // {
+      //   to: "/",
+      //   label: "首页",
+      //   position: "right",
+      // },
+      {
+        to: "docs/all-intro",
+        label: "专属学习笔记",
+        position: "right",
+      },
+      {
+        label: "小工具",
+        position: "right",
+        items: [
+          {
+            label: "同比增减在线换算工具",
+            to: "https://tools.zhangqiang.hk.cn/",
+          },
+          {
+            label: "简易的rap参数转ts格式工具",
+            to: "https://jack-zhang-coming.github.io/rap-to-ts/",
+          },
+          {
+            label: "小张同学的照片墙",
+            to: "https://photo.zhangqiang.hk.cn/",
+          },
+          // {
+          //   label: "基于ChatGPT的问答系统",
+          //   to: "http://chatgptrobot.zhangqiang.hk.cn/",
+          // },
+        ],
+      },
+      {
+        href: "https://github.com/JACK-ZHANG-coming/my-now-blog",
+        label: "本站源码",
+        position: "right",
+      },
       ],
     },
     algolia: {
@@ -79,53 +84,53 @@ module.exports = {
     footer: {
       style: "dark",
       links: [{
-          title: "学习",
-          items: [{
-              label: "w3school 在线教程",
-              to: "https://www.w3school.com.cn/index.html",
-            },
-            {
-              label: "JavaScript | MDN",
-              to: "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random",
-            },
-            {
-              label: "前端学习路线",
-              to: "https://objtube.gitee.io/front-end-roadmap/#/",
-            },
-            {
-              label: "使用 State Hook – React",
-              to: "https://zh-hans.reactjs.org/docs/hooks-state.html#gatsby-focus-wrapper",
-            },
-          ],
+        title: "学习",
+        items: [{
+          label: "w3school 在线教程",
+          to: "https://www.w3school.com.cn/index.html",
         },
         {
-          title: "社交媒体",
-          items: [{
-              label: "GitHub",
-              href: "https://github.com/JACK-ZHANG-coming",
-            },
-            {
-              label: "Bilibili 哔哩哔哩",
-              href: "https://space.bilibili.com/299974236",
-            },
-          ],
+          label: "JavaScript | MDN",
+          to: "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random",
         },
         {
-          title: "友情链接",
-          items: [{
-              label: "yuqing521のblog",
-              to: "https://yuqing521.github.io/",
-            },
-            {
-              label: "lookroot的个人空间",
-              to: "https://www.lookroot.cn/",
-            },
-            {
-              label: "峰华前端工程师",
-              to: "https://zxuqian.cn",
-            },
-          ],
+          label: "前端学习路线",
+          to: "https://objtube.gitee.io/front-end-roadmap/#/",
         },
+        {
+          label: "使用 State Hook – React",
+          to: "https://zh-hans.reactjs.org/docs/hooks-state.html#gatsby-focus-wrapper",
+        },
+        ],
+      },
+      {
+        title: "社交媒体",
+        items: [{
+          label: "GitHub",
+          href: "https://github.com/JACK-ZHANG-coming",
+        },
+        {
+          label: "Bilibili 哔哩哔哩",
+          href: "https://space.bilibili.com/299974236",
+        },
+        ],
+      },
+      {
+        title: "友情链接",
+        items: [{
+          label: "yuqing521のblog",
+          to: "https://yuqing521.github.io/",
+        },
+        {
+          label: "lookroot的个人空间",
+          to: "https://www.lookroot.cn/",
+        },
+        {
+          label: "峰华前端工程师",
+          to: "https://zxuqian.cn",
+        },
+        ],
+      },
       ],
       copyright: `<p>Copyright © ${new Date().getFullYear()} 111峰华 (张旭乾) Built with Docusaurus.</p>
       <p><a href="http://beian.miit.gov.cn/" style="color: hsl(210deg, 100%, 80%)">冀ICP备14007097号-3</a></p>
@@ -162,7 +167,7 @@ module.exports = {
           showLastUpdateTime: true,
           // sidebar:{
           //   hideeble:{
-              
+
           //   }
           // }
         },
@@ -220,21 +225,21 @@ module.exports = {
     // ],
   ],
   stylesheets: [{
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com",
-      type: "text/css",
-    },
-    {
-      href: "/katex/katex.min.css",
-      type: "text/css",
-      integrity: "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
-      crossorigin: "anonymous",
-    },
-    {
-      href: "https://fonts.font.im/css?family=Raleway:500,700&display=swap",
-      type: "text/css",
-      rel: "stylesheet",
-    },
+    rel: "preconnect",
+    href: "https://fonts.gstatic.com",
+    type: "text/css",
+  },
+  {
+    href: "/katex/katex.min.css",
+    type: "text/css",
+    integrity: "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+    crossorigin: "anonymous",
+  },
+  {
+    href: "https://fonts.font.im/css?family=Raleway:500,700&display=swap",
+    type: "text/css",
+    rel: "stylesheet",
+  },
     // {
     //   href: "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap",
     //   type: "text/css",
