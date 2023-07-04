@@ -370,7 +370,7 @@ function SocialLinks({ animatedProps, ...props }) {
         <img
           width="50%"
           className="dropdown__menu"
-          src='https://z3.ax1x.com/2021/05/16/g2S51s.jpg'//{useBaseUrl("/img/publicQR.webp")}
+          src='https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/521a9652a05e48ddac18d355151faeb4~tplv-k3u1fbpfcp-watermark.image?'//{useBaseUrl("/img/publicQR.webp")}
         />
       </div>
     </animated.div>
