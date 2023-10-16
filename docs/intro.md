@@ -8,7 +8,7 @@ sidebar_label: 开始
 - html
 - css
 - javascript
-- react
+- react2
 - 微信小程序
 - HTTP
 - Browser(浏览器)
