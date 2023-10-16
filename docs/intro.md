@@ -7,7 +7,7 @@ sidebar_label: 开始
 此模块为my所有博客笔记汇总，主要记录
 - html
 - css
-- javascript
+- javascript3232
 - react
 - 微信小程序
 - HTTP
