@@ -62,10 +62,14 @@ module.exports = {
             label: "小张同学的照片墙",
             to: "https://photo.zhangqiang.hk.cn/",
           },
-          // {
-          //   label: "基于ChatGPT的问答系统",
-          //   to: "http://chatgptrobot.zhangqiang.hk.cn/",
-          // },
+          {
+            label: "基于ChatGPT的问答系统",
+            to: "http://chatgptrobot.zhangqiang.hk.cn/",
+          },
+          {
+            label: "朴实无华的书签导航网站",
+            to: "https://simplebookmarksite.zhangqiang.hk.cn/home",
+          },
         ],
       },
       {
