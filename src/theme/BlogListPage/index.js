@@ -359,7 +359,7 @@ function SocialLinks({ animatedProps, ...props }) {
       <a href="https://github.com/JACK-ZHANG-coming">
         <FontAwesomeIcon icon={faGithub} size="lg" />
       </a>
-      <a href="https://blog.csdn.net/weixin_43207103?spm=1000.2115.3001.5343">
+      <a href="https://blog.csdn.net/this_zq?spm=1000.2115.3001.5343">
         <CSDNIcon />
       </a>
       <a href="https://juejin.cn/user/1451011082041517/posts">
