@@ -1,11 +1,11 @@
 ---
-slug: pnpm依赖安装解决|pnpm项目从一个文件夹复制到另一个文件夹运行失败问题解决-以vbenAdmin项目为例
-title: pnpm依赖安装解决|pnpm项目从一个文件夹复制到另一个文件夹运行失败问题解决-以vbenAdmin项目为例
+slug: pnpm依赖安装解决pnpm项目从一个文件夹复制到另一个文件夹运行失败问题解决-以vbenAdmin项目为例
+title: pnpm依赖安装解决pnpm项目从一个文件夹复制到另一个文件夹运行失败问题解决-以vbenAdmin项目为例
 author: 潜心专研的小张同学
 author_title: 前端工程师 / B站UP主
 author_url: https://github.com/JACK-ZHANG-coming
 author_image_url: https://avatars.githubusercontent.com/u/44993003?s=400&u=02570a73330dd7eeae310b302962c034b2833988&v=4
-description: pnpm依赖安装解决|pnpm项目从一个文件夹复制到另一个文件夹运行失败问题解决-以vbenAdmin项目为例
+description: pnpm依赖安装解决pnpm项目从一个文件夹复制到另一个文件夹运行失败问题解决-以vbenAdmin项目为例
 tags: [前端, pnpm, 项目迁移]
 # activityId: 相关动态 ID
 # bvid: 相关视频 ID（与 activityId 2选一）
