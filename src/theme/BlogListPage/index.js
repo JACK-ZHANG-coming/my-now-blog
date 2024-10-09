@@ -92,7 +92,7 @@ function BlogListPage(props) {
 
 
   useEffect(() => {
-    
+
   }, []);
 
   return (
@@ -370,7 +370,7 @@ function SocialLinks({ animatedProps, ...props }) {
         <img
           width="50%"
           className="dropdown__menu"
-          src='https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/521a9652a05e48ddac18d355151faeb4~tplv-k3u1fbpfcp-watermark.image?'//{useBaseUrl("/img/publicQR.webp")}
+          src='https://s3.bmp.ovh/imgs/2024/10/09/b2f362274cbaee44.jpg'//{useBaseUrl("/img/publicQR.webp")}
         />
       </div>
     </animated.div>
