@@ -37,7 +37,7 @@ function Comments({ activityId, oid, bvid }) {
   };
 
   useEffect(() => {
-    getComments();
+    // getComments();
   }, []);
 
   return (

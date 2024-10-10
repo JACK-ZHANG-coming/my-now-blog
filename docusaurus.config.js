@@ -199,25 +199,25 @@ module.exports = {
   ],
   // themes: ["@docusaurus/theme-live-codeblock"],
   plugins: [
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-analytics"),
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-push"),
+    // path.resolve(__dirname, "./src/plugin/plugin-baidu-analytics"),
+    // path.resolve(__dirname, "./src/plugin/plugin-baidu-push"),
     // "@docusaurus/plugin-ideal-image",
-    path.resolve(__dirname, "./src/plugin/plugin-google-adsense"),
-    path.resolve(__dirname, "./src/plugin/plugin-onesignal-push"),
+    // path.resolve(__dirname, "./src/plugin/plugin-google-adsense"),
+    // path.resolve(__dirname, "./src/plugin/plugin-onesignal-push"),
     "docusaurus2-dotenv",
-    [
-      "@docusaurus/plugin-content-blog",
-      {
-        id: "lifestyle-blog",
-        routeBasePath: "lifestyle",
-        path: "./lifestyle",
-        feedOptions: {
-          type: "all",
-          title: "峰华前端工程师2222",
-          copyright: `Copyright © ${new Date().getFullYear()} 3333峰华 (张旭乾) Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/">冀ICP备14007097号-3</a></p>`,
-        },
-      },
-    ],
+    // [
+    //   "@docusaurus/plugin-content-blog",
+    //   {
+    //     id: "lifestyle-blog",
+    //     routeBasePath: "lifestyle",
+    //     path: "./lifestyle",
+    //     feedOptions: {
+    //       type: "all",
+    //       title: "峰华前端工程师2222",
+    //       copyright: `Copyright © ${new Date().getFullYear()} 3333峰华 (张旭乾) Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/">冀ICP备14007097号-3</a></p>`,
+    //     },
+    //   },
+    // ],
     // [
     //   "@easyops-cn/docusaurus-search-local",
     //   {

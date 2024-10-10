@@ -287,7 +287,7 @@ function Count({ postId, ...post }) {
         };
 
         useEffect(() => {
-          addViewCount();
+          // addViewCount();
         }, []);
         return null;
       }}

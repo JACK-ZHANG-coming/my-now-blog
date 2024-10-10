@@ -21,7 +21,7 @@ export default function useViews(items) {
   };
 
   useEffect(() => {
-    getViews();
+    // getViews();
   }, []);
 
   return views;
