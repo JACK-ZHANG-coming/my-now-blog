@@ -6,6 +6,7 @@ const WebSocket = require('ws');
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
+const https = require('https');  // ← 新增：用于 Server酱 HTTP 请求
 
 // ============================================================
 // 配置
@@ -13,6 +14,19 @@ const XLSX = require('xlsx');
 const CONFIG = {
   wsPort: 6199,
   productsFile: path.join(__dirname, 'products.xlsx'),
+
+  // ========== 新增：Server酱配置 ==========
+  serverChan: {
+    sendKey: 'SCT327413TdhTQm9Gt7PFZWdArXHco58M3',  // ← 在这里填入你的 SendKey（从 sct.ftqq.com 获取）
+    enabled: true,             // 是否启用推送
+  },
+
+  // ========== 新增：定时推送配置 ==========
+  pushTimes: [
+    { hour: 11, minute: 0, label: '上午' },
+    { hour: 15, minute: 0, label: '下午' },
+    { hour: 18, minute: 0, label: '傍晚' },
+  ],
 
   scripts: {
     askMaterial: `请问你想找什么物料？多少数量？`,
@@ -86,6 +100,179 @@ function findProduct(text) {
   }
 
   return scoreMax > 0.6 ? best : null;
+}
+
+// ============================================================
+// 新增：询价记录
+// ============================================================
+let todayInquiries = [];
+
+function addInquiry(uid, model, price, dc, leadTime, isReal) {
+  todayInquiries.push({
+    time: new Date().toLocaleString('zh-CN'),
+    qqId: uid,
+    model: model,
+    price: price,
+    dc: dc || '',
+    leadTime: leadTime || '',
+    isReal: isReal || '待确认',
+  });
+  console.log(`[询价] 记录: ${model} - ${price}`);
+}
+
+// ============================================================
+// 新增：Server酱推送
+// ============================================================
+function pushToServerChan(title, content) {
+  const key = CONFIG.serverChan.sendKey;
+
+  if (!key || key === 'SCTxxxxxxxxx') {
+    console.log('[推送] ⚠️  未配置 SendKey，跳过推送');
+    return;
+  }
+
+  if (!CONFIG.serverChan.enabled) {
+    console.log('[推送] 已禁用，跳过');
+    return;
+  }
+
+  const postData = JSON.stringify({ title, desp: content });
+
+  const options = {
+    hostname: 'sctapi.ftqq.com',
+    path: `/${key}.send`,
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Content-Length': Buffer.byteLength(postData),
+    },
+  };
+
+  const req = https.request(options, (res) => {
+    let data = '';
+    res.on('data', chunk => data += chunk);
+    res.on('end', () => {
+      if (res.statusCode === 200) {
+        console.log(`[推送] ✅ 成功: ${title}`);
+      } else {
+        console.log(`[推送] ❌ 失败: ${res.statusCode} - ${data}`);
+      }
+    });
+  });
+
+  req.on('error', (e) => {
+    console.log(`[推送] ❌ 错误: ${e.message}`);
+  });
+
+  req.write(postData);
+  req.end();
+}
+
+// ============================================================
+// 新增：生成推送内容
+// ============================================================
+function buildPushText(label) {
+  const today = new Date().toLocaleDateString('zh-CN');
+  const count = todayInquiries.length;
+
+  if (count === 0) {
+    return {
+      title: `📊 ${today} ${label}询价汇总`,
+      content: `本时段暂无询价记录。`
+    };
+  }
+
+  // 统计热门型号
+  const modelCount = {};
+  const customerSet = new Set();
+  const realOrderCount = { '是': 0, '否': 0, '待确认': 0 };
+
+  todayInquiries.forEach(r => {
+    modelCount[r.model] = (modelCount[r.model] || 0) + 1;
+    customerSet.add(r.qqId);
+    realOrderCount[r.isReal] = (realOrderCount[r.isReal] || 0) + 1;
+  });
+
+  const topModels = Object.entries(modelCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([m, c]) => `- ${m}：${c}次`)
+    .join('\n');
+
+  const content = [
+    `**今日累计询价：${count} 条**`,
+    `**询价客户数：${customerSet.size} 人**`,
+    `**实单确认：✅是${realOrderCount['是'] || 0} | ❌否${realOrderCount['否'] || 0} | ⏳待确认${realOrderCount['待确认'] || 0}**`,
+    ``,
+    `**热门型号 TOP10：**`,
+    topModels,
+    ``,
+    `*明细已保存至本地 Excel*`,
+  ].join('\n');
+
+  return {
+    title: `📊 ${today} ${label}询价汇总（共${count}条）`,
+    content
+  };
+}
+
+// ============================================================
+// 新增：测试 Server酱推送
+// ============================================================
+function testServerChan() {
+  console.log('[测试] 正在测试 Server酱推送...');
+
+  const title = '🤖 QQ机器人测试推送';
+  const content = [
+    `**测试时间：** ${new Date().toLocaleString('zh-CN')}`,
+    ``,
+    `如果你收到这条消息，说明 Server酱配置成功！✅`,
+    ``,
+    `---`,
+    `这是一条测试消息，请忽略。`,
+  ].join('\n');
+
+  pushToServerChan(title, content);
+}
+
+// ============================================================
+// 新增：定时推送调度
+// ============================================================
+function schedulePushes() {
+  CONFIG.pushTimes.forEach(({ hour, minute, label }) => {
+    scheduleDaily(hour, minute, () => {
+      console.log(`\n[定时] ⏰ 触发 ${label} 推送...`);
+      const { title, content } = buildPushText(label);
+      pushToServerChan(title, content);
+    });
+    console.log(`[定时] ✅ 已注册: ${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')} ${label}推送`);
+  });
+
+  // 每天 23:55 清空记录
+  scheduleDaily(23, 55, () => {
+    console.log('[定时] 🌙 清空今日询价记录');
+    todayInquiries = [];
+  });
+}
+
+function scheduleDaily(hour, minute, callback) {
+  function getNextDelay() {
+    const now = new Date();
+    const next = new Date();
+    next.setHours(hour, minute, 0, 0);
+    if (next <= now) next.setDate(next.getDate() + 1);
+    return next - now;
+  }
+
+  function loop() {
+    const delay = getNextDelay();
+    setTimeout(() => {
+      callback();
+      loop();
+    }, delay);
+  }
+
+  loop();
 }
 
 // ============================================================
@@ -201,6 +388,11 @@ async function handle(uid, text) {
       if (!p) return;
       send(uid, CONFIG.scripts.reply(p));
       s.state = 'done';
+
+      // ========== 新增：记录询价 ==========
+      const isReal = text.includes('是') || text.includes('实单') ? '是' :
+        text.includes('不') || text.includes('询价') ? '否' : '待确认';
+      addInquiry(uid, p.型号, p.价格, p.DC, p.货期, isReal);
       break;
 
     case 'done':
@@ -262,4 +454,13 @@ function start() {
 // 启动
 // ============================================================
 loadProducts();
+schedulePushes();  // ← 新增：启动定时推送
+
+// ========== 新增：22:37 测试推送 ==========
+// scheduleDaily(22, 37, () => {
+//   console.log('\n[测试] ⏰ 触发 22:37 测试推送...');
+//   testServerChan();
+// });
+// console.log('[测试] ✅ 已注册: 22:37 测试推送');
+
 start();
