@@ -11,7 +11,7 @@ export default function useFollowers() {
   };
 
   useEffect(() => {
-    getFollowers();
+    // getFollowers();
   }, []);
 
   return followers;
