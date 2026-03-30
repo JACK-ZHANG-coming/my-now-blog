@@ -1,5 +1,5 @@
 /**
- * QQ 库存机器人 v6.4 - 成交流程控制版
+ * QQ 库存机器人 v6.5 - 库存判断增强版
  */
 
 const WebSocket = require('ws');
@@ -78,6 +78,7 @@ function loadProducts() {
       DC: r['DC'],
       货期: r['货期'],
       地址: r['地址'],
+      库存数量: r['库存数量'], // ✅ 已有
     });
   });
 
@@ -99,7 +100,7 @@ function findProduct(text) {
     }
   }
 
-  return scoreMax > 0.6 ? best : null;
+  return scoreMax > 0.8 ? best : null;
 }
 
 // ============================================================
@@ -384,9 +385,24 @@ async function handle(uid, text) {
         send(uid, CONFIG.scripts.askQuantity);
         return;
       }
+
       const p = findProduct(s.model);
       if (!p) return;
-      send(uid, CONFIG.scripts.reply(p));
+
+      // ================================
+      // ✅ 核心新增：库存判断
+      // ================================
+      let stockMsg = '';
+      const stock = Number(p.库存数量) || 0;
+
+      if (stock >= s.qty) {
+        stockMsg = '，数量充足';
+      } else {
+        stockMsg = `，当前库存${stock}`;
+      }
+
+      send(uid, CONFIG.scripts.reply(p) + stockMsg);
+
       s.state = 'done';
 
       // ========== 新增：记录询价 ==========
@@ -439,7 +455,7 @@ function start() {
     ws.on('message', data => {
       const m = JSON.parse(data.toString());
 
-      if (m.post_type === 'message') {
+      if (m.post_type === 'message' && m.message_type === 'private') {
         const text = typeof m.message === 'string'
           ? m.message
           : m.message.map(i => i.data?.text || '').join('');
