@@ -85,7 +85,7 @@ function loadProducts() {
   console.log(`[数据] 已加载 ${productDB.size} 个型号`);
 }
 
-function findProduct(text) {
+function findProduct(text, rate) {
   const msg = normalize(text);
 
   let best = null, scoreMax = 0;
@@ -100,7 +100,7 @@ function findProduct(text) {
     }
   }
 
-  return scoreMax > 0.8 ? best : null;
+  return scoreMax >= rate ? best : null;
 }
 
 // ============================================================
@@ -280,14 +280,21 @@ function scheduleDaily(hour, minute, callback) {
 // 数量识别
 // ============================================================
 function extractQty(text) {
-  // 必须带单位才认数量
-  const match = text.match(/(\d+)\s*(k|K|pcs|PCS|个|只|片)/);
-  if (!match) return null;
+  if (!text || typeof text !== 'string') return null;
 
-  let num = parseInt(match[1]);
-  if (/k/i.test(match[2])) num *= 1000;
+  const parts = text.trim().split(/\s+/).reverse(); // 倒序查找
 
-  return num;
+  for (let part of parts) {
+    const match = part.match(/(\d+)\s*(k|K|pcs|PCS|个|只|片|盘|包|盒|卷|Kpcs|kpcs|KPCS|kPCS)/);
+    if (match) {
+      let num = parseInt(match[1]);
+      if (/k/i.test(match[2])) num *= 1000;
+      console.log('提取到数量:', num, '来自:', part);
+      return num;
+    }
+  }
+
+  return null;
 }
 
 // ============================================================
@@ -315,7 +322,7 @@ function getSession(uid) {
 async function handle(uid, text) {
   const s = getSession(uid);
   text = text.trim();
-  const product = findProduct(text);
+  const product = findProduct(text, 1) || findProduct(text, 0.9) || findProduct(text, 0.7) || findProduct(text, 0.5);
   // ====================================================
   // ✅ 解锁机制（必须放最前）
   // ====================================================
@@ -324,8 +331,7 @@ async function handle(uid, text) {
     s.locked = false;
     s.state = 'wait_qty';
     s.model = product.型号;
-    s.qty = null;
-
+    s.qty = extractQty(text);
     send(uid, '请问多少数量？');
     return;
   }
@@ -344,6 +350,11 @@ async function handle(uid, text) {
   }
 
   const qty = extractQty(text);
+
+  if (s.state == 'init' && product) {
+    console.log(`----[新型号]---- ${product.型号}`);
+    s.state = 'wait_model';
+  }
 
   switch (s.state) {
 
@@ -386,7 +397,7 @@ async function handle(uid, text) {
         return;
       }
 
-      const p = findProduct(s.model);
+      const p = findProduct(s.model, 1) || findProduct(s.model, 0.9) || findProduct(s.model, 0.7) || findProduct(s.model, 0.5);
       if (!p) return;
 
       // ================================
@@ -408,6 +419,7 @@ async function handle(uid, text) {
       // ========== 新增：记录询价 ==========
       const isReal = text.includes('是') || text.includes('实单') ? '是' :
         text.includes('不') || text.includes('询价') ? '否' : '待确认';
+      console.log(`[询价] ${uid}: ${p.型号} ${p.价格} ${p.DC} ${p.货期} ${isReal}`);
       addInquiry(uid, p.型号, p.价格, p.DC, p.货期, isReal);
       break;
 
@@ -454,6 +466,14 @@ function start() {
 
     ws.on('message', data => {
       const m = JSON.parse(data.toString());
+
+      // 👉 新增：处理好友通过事件
+      if (m.post_type === 'notice' && m.notice_type === 'friend_add') {
+        const uid = m.user_id;
+        console.log(`[事件] 新增好友: ${uid}`);
+        send(uid, '你好，请问你是哪家公司？请提供联系方式，方便我们后续合作沟通。');
+        return;
+      }
 
       if (m.post_type === 'message' && m.message_type === 'private') {
         const text = typeof m.message === 'string'
