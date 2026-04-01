@@ -104,12 +104,62 @@ function findProduct(text, rate) {
 }
 
 // ============================================================
-// 新增：询价记录
+// 询价记录（内存 + 本地文件）
 // ============================================================
 let todayInquiries = [];
 
+// 保存目录：bot.js 同级的 records 文件夹
+const RECORDS_DIR = path.join(__dirname, 'records');
+
+// 确保目录存在
+if (!fs.existsSync(RECORDS_DIR)) {
+  fs.mkdirSync(RECORDS_DIR, { recursive: true });
+  console.log(`[记录] 已创建目录: ${RECORDS_DIR}`);
+}
+
+// 获取今天的 Excel 文件路径，格式：records/2026-04-01.xlsx
+function getTodayFilePath() {
+  const today = new Date();
+  const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  return path.join(RECORDS_DIR, `${dateStr}.xlsx`);
+}
+
+// 写入询价记录到 Excel（追加模式）
+function saveInquiryToFile(record) {
+  const filePath = getTodayFilePath();
+
+  let wb, ws;
+  const headers = ['时间', 'QQ号', '型号', '价格', 'DC', '货期', '是否实单'];
+
+  if (fs.existsSync(filePath)) {
+    // 文件已存在，读取后追加
+    wb = XLSX.readFile(filePath);
+    ws = wb.Sheets[wb.SheetNames[0]];
+  } else {
+    // 新建文件，写入表头
+    wb = XLSX.utils.book_new();
+    ws = XLSX.utils.aoa_to_sheet([headers]);
+    XLSX.utils.book_append_sheet(wb, ws, '询价记录');
+  }
+
+  // 追加一行数据
+  const newRow = [
+    record.time,
+    record.qqId,
+    record.model,
+    record.price,
+    record.dc,
+    record.leadTime,
+    record.isReal,
+  ];
+
+  XLSX.utils.sheet_add_aoa(ws, [newRow], { origin: -1 }); // origin: -1 表示追加到末尾
+  XLSX.writeFile(wb, filePath);
+  console.log(`[记录] 💾 已保存到: ${path.basename(filePath)}`);
+}
+
 function addInquiry(uid, model, price, dc, leadTime, isReal) {
-  todayInquiries.push({
+  const record = {
     time: new Date().toLocaleString('zh-CN'),
     qqId: uid,
     model: model,
@@ -117,7 +167,14 @@ function addInquiry(uid, model, price, dc, leadTime, isReal) {
     dc: dc || '',
     leadTime: leadTime || '',
     isReal: isReal || '待确认',
-  });
+  };
+
+  // 1. 存入内存（用于当天推送统计）
+  todayInquiries.push(record);
+
+  // 2. 实时写入本地 Excel 文件
+  saveInquiryToFile(record);
+
   console.log(`[询价] 记录: ${model} - ${price}`);
 }
 
