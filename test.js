@@ -227,11 +227,55 @@ function pushToServerChan(title, content) {
 }
 
 // ============================================================
+// 从 Excel 读取当天询价记录
+// ============================================================
+function readTodayInquiriesFromExcel() {
+  const filePath = getTodayFilePath();
+  const inquiries = [];
+
+  if (!fs.existsSync(filePath)) {
+    console.log(`[记录] 文件不存在: ${filePath}`);
+    return inquiries;
+  }
+
+  try {
+    const wb = XLSX.readFile(filePath);
+    const ws = wb.Sheets[wb.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(ws, { defval: '' });
+
+    // 跳过表头，从第一行数据开始
+    for (let i = 1; i < rows.length; i++) {
+      const r = rows[i];
+      if (r['QQ号']) {
+        inquiries.push({
+          time: r['时间'] || '',
+          qqId: r['QQ号'] || '',
+          model: r['型号'] || '',
+          price: r['价格'] || '',
+          dc: r['DC'] || '',
+          leadTime: r['货期'] || '',
+          isReal: r['是否实单'] || '待确认',
+        });
+      }
+    }
+
+    console.log(`[记录] 从 Excel 读取到 ${inquiries.length} 条记录`);
+  } catch (e) {
+    console.log(`[记录] 读取失败: ${e.message}`);
+  }
+
+  return inquiries;
+}
+
+// ============================================================
 // 新增：生成推送内容
 // ============================================================
 function buildPushText(label) {
   const today = new Date().toLocaleDateString('zh-CN');
-  const count = todayInquiries.length;
+
+  // ✅ 从当天的 Excel 文件读取数据
+  const inquiries = readTodayInquiriesFromExcel();
+  const count = inquiries.length;
 
   if (count === 0) {
     return {
@@ -245,7 +289,7 @@ function buildPushText(label) {
   const customerSet = new Set();
   const realOrderCount = { '是': 0, '否': 0, '待确认': 0 };
 
-  todayInquiries.forEach(r => {
+  inquiries.forEach(r => {
     modelCount[r.model] = (modelCount[r.model] || 0) + 1;
     customerSet.add(r.qqId);
     realOrderCount[r.isReal] = (realOrderCount[r.isReal] || 0) + 1;
@@ -257,6 +301,12 @@ function buildPushText(label) {
     .map(([m, c]) => `- ${m}：${c}次`)
     .join('\n');
 
+  // ✅ 新增：详细记录表格
+  const detailLines = inquiries.map(r => {
+    const timeStr = r.time.split(' ')[1] || r.time; // 只显示时间部分
+    return `${timeStr} | ${r.qqId} | ${r.model} | ¥${r.price}`;
+  });
+
   const content = [
     `**今日累计询价：${count} 条**`,
     `**询价客户数：${customerSet.size} 人**`,
@@ -265,7 +315,10 @@ function buildPushText(label) {
     `**热门型号 TOP10：**`,
     topModels,
     ``,
-    `*明细已保存至本地 Excel*`,
+    `**📋 详细记录：**`,
+    `时间 | QQ号 | 型号 | 价格`,
+    `--- | --- | --- | ---`,
+    ...detailLines,
   ].join('\n');
 
   return {
@@ -278,18 +331,7 @@ function buildPushText(label) {
 // 新增：测试 Server酱推送
 // ============================================================
 function testServerChan() {
-  console.log('[测试] 正在测试 Server酱推送...');
-
-  const title = '🤖 QQ机器人测试推送';
-  const content = [
-    `**测试时间：** ${new Date().toLocaleString('zh-CN')}`,
-    ``,
-    `如果你收到这条消息，说明 Server酱配置成功！✅`,
-    ``,
-    `---`,
-    `这是一条测试消息，请忽略。`,
-  ].join('\n');
-
+  const { title, content } = buildPushText('测试');
   pushToServerChan(title, content);
 }
 
@@ -549,11 +591,11 @@ function start() {
 loadProducts();
 schedulePushes();  // ← 新增：启动定时推送
 
-// ========== 新增：22:37 测试推送 ==========
-// scheduleDaily(22, 37, () => {
-//   console.log('\n[测试] ⏰ 触发 22:37 测试推送...');
+// ========== 新增：23:32 测试推送 ==========
+// scheduleDaily(23, 32, () => {
+//   console.log('\n[测试] ⏰ 触发 23:32 测试推送...');
 //   testServerChan();
 // });
-// console.log('[测试] ✅ 已注册: 22:37 测试推送');
+// console.log('[测试] ✅ 已注册: 23:32 测试推送');
 
 start();
