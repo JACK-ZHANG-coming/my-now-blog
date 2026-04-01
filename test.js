@@ -298,27 +298,37 @@ function buildPushText(label) {
   const topModels = Object.entries(modelCount)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 10)
-    .map(([m, c]) => `- ${m}：${c}次`)
+    .map(([m, c]) => `• ${m}：${c}次`)
     .join('\n');
 
-  // ✅ 新增：详细记录表格
+  // ✅ 新增：详细记录表格（每行换行）
   const detailLines = inquiries.map(r => {
-    const timeStr = r.time.split(' ')[1] || r.time; // 只显示时间部分
-    return `${timeStr} | ${r.qqId} | ${r.model} | ¥${r.price}`;
+    return [
+      `┌ 时间：${r.time.split(' ')[1] || r.time}`,
+      `│ QQ号：${r.qqId}`,
+      `│ 型号：${r.model}`,
+      `│ 价格：¥${r.price}`,
+      `└ 是否实单：${r.isReal}`,
+    ].join('\n');
   });
 
   const content = [
-    `**今日累计询价：${count} 条**`,
-    `**询价客户数：${customerSet.size} 人**`,
-    `**实单确认：✅是${realOrderCount['是'] || 0} | ❌否${realOrderCount['否'] || 0} | ⏳待确认${realOrderCount['待确认'] || 0}**`,
     ``,
-    `**热门型号 TOP10：**`,
+    `📈 今日询价统计`,
+    `\n━━━━━━━━━━━━━━━━━━`,
+    `累计询价：${count} 条`,
+    `询价客户：${customerSet.size} 人`,
+    `实单确认：✅是${realOrderCount['是'] || 0}  |  ❌否${realOrderCount['否'] || 0}  |  ⏳待确认${realOrderCount['待确认'] || 0}`,
+    ``,
+    `🔥 热门型号 TOP10`,
+    `━━━━━━━━━━━━━━━━━━`,
     topModels,
     ``,
-    `**📋 详细记录：**`,
-    `时间 | QQ号 | 型号 | 价格`,
-    `--- | --- | --- | ---`,
+    `📋 详细记录`,
+    `━━━━━━━━━━━━━━━━━━`,
     ...detailLines,
+    ``,
+    `💾 明细已保存至本地 Excel`,
   ].join('\n');
 
   return {
@@ -592,10 +602,10 @@ loadProducts();
 schedulePushes();  // ← 新增：启动定时推送
 
 // ========== 新增：23:32 测试推送 ==========
-// scheduleDaily(23, 32, () => {
-//   console.log('\n[测试] ⏰ 触发 23:32 测试推送...');
+// scheduleDaily(23, 43, () => {
+//   console.log('\n[测试] ⏰ 触发 23:43 测试推送...');
 //   testServerChan();
 // });
-// console.log('[测试] ✅ 已注册: 23:32 测试推送');
+// console.log('[测试] ✅ 已注册: 23:43 测试推送');
 
 start();
